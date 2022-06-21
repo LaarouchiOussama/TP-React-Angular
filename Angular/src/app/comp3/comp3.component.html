@@ -1,0 +1,42 @@
+<div>
+    <h2>Pipes Date</h2>
+    <div>
+        <ul>
+            <li>{{date}}</li>
+            <li>{{date | date:'shortDate'}}</li>
+            <li>{{date | date:'mediumDate'}}</li>
+            <li>{{date | date:'fullDate'}}</li>
+            <li>{{date | date:'HH:MM'}}</li>
+            <li>{{date | date:'hh:mm:ss a'}}</li>
+            <li>{{date | date:'hh:mm:ss p'}}</li>
+        </ul>
+    </div>
+    <br>
+    <h2>Pipes Strings</h2>
+    <div>
+        <ul>
+            <li>{{message}}</li>
+            <li>{{message | uppercase}}</li>
+            <li>{{message | lowercase}}</li>
+        </ul>
+    </div>
+    <br>
+    <h2>Pipes Number</h2>
+    <div>
+        <ul>
+            <li>{{nombre}}</li>
+            <li>{{nombre | number:'2.2-2'}}</li>
+            <li>{{nombre | number:'3.3-3'}}</li>
+            <li>{{1 | percent:'.2'}}</li>
+            <li>{{nombre | percent:'.2'}}</li>
+            <li>{{nombre | currency:'USD':true}}</li>
+            <li>{{nombre | currency:'USD':false}}</li>
+            <li>{{nombre | currency:'MAD':true}}</li>
+        </ul>
+    </div>
+    <br>
+    <h2>My Own Pipe</h2>
+    <div>
+        {{ 0 | testpipe }}
+    </div>
+</div>

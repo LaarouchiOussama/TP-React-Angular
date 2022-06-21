@@ -1,0 +1,40 @@
+<div>
+    <h1>{{title}}</h1>
+    <ng-container *ngFor="let elt of tab">
+        <ul>
+            <li *ngIf="elt % 2 == 0; then si else sinon" ></li>
+            <ng-template #si>
+                <li>
+                    {{elt}} est Paire
+                </li>
+            </ng-template>
+            <ng-template #sinon>
+                <li>
+                    {{elt}} est Impaire
+                </li>
+            </ng-template>
+        </ul>
+    </ng-container>
+    <ng-container *ngFor="let elt of moyenne">
+    <ng-container [ngSwitch]="true">
+        <ng-template *ngSwitchCase="elt >= 10 && elt < 12">
+            Validé: Moyen.
+        </ng-template>  
+        <ng-template *ngSwitchCase="elt >= 12 && elt < 14">
+            Validé: Assez Bien.
+        </ng-template>  
+        <ng-template *ngSwitchCase="elt >= 14 && elt < 16">
+            Validé: Bien.
+        </ng-template>  
+        <ng-template *ngSwitchCase="elt >= 16 && elt < 18">
+            Validé: Trés Bien.
+        </ng-template>  
+        <ng-template *ngSwitchCase="elt >= 18 && elt < 20">
+            Validé: Excellent.
+        </ng-template>  
+        <ng-template *ngSwitchDefault>
+            Non Validé
+        </ng-template>
+    </ng-container>
+    </ng-container>
+</div>

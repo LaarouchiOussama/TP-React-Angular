@@ -1,0 +1,15 @@
+<div>
+    <h3>{{submit}}</h3>
+    <div>
+        <div>
+            Enter Your First Name : <input [(ngModel)]="personne.prenom" />
+        </div>
+        <br>
+        <div>
+            Enter Your Last Name : <input [(ngModel)]="personne.nom" />
+        </div>
+    </div>
+    <br>
+    <input type="submit" (click)="submitform()" >
+    <h4>{{personne | json}}</h4>
+</div>

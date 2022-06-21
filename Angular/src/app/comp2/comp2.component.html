@@ -1,0 +1,14 @@
+<div>
+    <p [class.red]="true">This is a Certain Color</p>
+    <p [ngClass]="{'blue': true}">This is a Certain Color</p>
+    <p [ngStyle]="{'font-size': 24, 'color': 'cyan'}">This is a Certain Color</p>
+    <br>
+    <p [class.red]="afficheColor">This is a Certain Color</p>
+    <p [ngClass]="{'grey': afficheColor}">This is a Certain Color</p>
+    <input type="button" value="Change Color" (click)="changeColor()"> 
+    <br>
+    <br>
+    <p [class.green]="afficheColor">This is a Certain Color</p>
+    <p [ngClass]="{'blue': afficheColor, 'red': !afficheColor}">This is a Certain Color</p>
+    <input type="button" value="Change Color" (click)="changeColor()"> 
+</div>
